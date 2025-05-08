@@ -1,0 +1,11 @@
+services:
+  mongodb:
+    container_name: mongodb
+    build: .
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO__CONNECTION__USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO__CONNECTION__PASSWORD}
+    volumes:
+      - ./data/mongodb:/data/db
+    ports:
+      - "27017:27017"
