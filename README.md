@@ -8,26 +8,25 @@
 ## Быстрый старт
 
 1. Клонируйте репозиторий:
-   ```bash
-   git clone <url-репозитория>
-   cd Infrastructure-MongoDB
-   ```
+
+```bash
+git clone <url-репозитория>
+cd Infrastructure-MongoDB
+```
 
 2. Создайте файл `.env` на основе примера:
-   ```bash
-   cp .env.example .env
-   ```
+
+```bash
+cp .env.example .env
+```
 
 3. Отредактируйте файл `.env`, установив необходимые значения
 
 4. Запустите инфраструктуру:
-   ```bash
-   ./scripts/bootstrap.sh
-   ```
-   или
-   ```bash
-   make up
-   ```
+
+```bash
+make up
+```
 
 ## Структура проекта
 
@@ -37,13 +36,10 @@ Infrastructure-MongoDB/
 ├── docker-compose.yml              # Конфигурация Docker Compose
 ├── Makefile                        # Команды для управления проектом
 ├── .env.example                    # Пример файла с переменными окружения
-├── scripts/
-│   ├── bootstrap.sh                # Скрипт для быстрого запуска
-│   └── initialization/             # Скрипты инициализации MongoDB
-│       ├── create-collections.js   # Создание коллекций
-│       └── create-indexes.js       # Создание индексов
-└── data/                           # Директория для хранения данных (создается автоматически)
-    └── mongodb/                    # Данные MongoDB
+└── scripts/
+    └── initialization/             # Скрипты инициализации MongoDB
+        ├── create-collections.js   # Создание коллекций
+        └── create-indexes.js       # Создание индексов
 ```
 
 ## Доступные команды
